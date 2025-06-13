@@ -14,7 +14,6 @@
 // console.log((undefined).toString())
 // console.log((null).toString())
 
-<<<<<<< HEAD
 // let isLoggedIn = true
 // typeof isLoggedIn
 // isLoggedIn
@@ -24,9 +23,7 @@
 // unknown + ''
 console.log('this is a string'.toString())
 console.log()
-=======
 let n = 255 // 10진수
->>>>>>> 4f2d9907c10e6cc589cde73065f68aff216120d1
 
 // 10진수 -> 2진수 변경
 console.log(n.toString(2)) // 2진수
@@ -34,7 +31,6 @@ console.log(n.toString(2)) // 2진수
 // 10진수 -> 16진수 변경
 console.log(n.toString(16)) // 16진수
 
-<<<<<<< HEAD
 // 10진수를 2진수 또는 16진수로 변경하는 함수 작성
 // ...
 // 10진수를 2, 8, 16 진수로 변경하는 함수
@@ -46,7 +42,6 @@ console.log(n.toString(16)) // 16진수
 function toHex(num) {
   return num.toString(16)
 }
-=======
 // 10진수를 16진수(hex)로 변경하는 함수 작성
 // 1. 함수 기능 고민 (10진수.toString(16))
 // 2. 적절한 함수 이름 작성 (toHex)
@@ -61,7 +56,6 @@ function toHexadecimal(n) {
 // const toHexadecimal = n => n.toString(16)
 
 console.log(toHexadecimal(255) === 'ff')
->>>>>>> 4f2d9907c10e6cc589cde73065f68aff216120d1
 
 console.log(toHex(255) === 'ff')
 // 4. 반환값 설계(16진수 문자열)
@@ -83,19 +77,70 @@ console.log(toHex(255) === 'ff')
 // - 2 또는 16진수 문자열을 10진수로 변경
 // --------------------------------------------------------------------------
 
+// parseInt()
+// let value = '32px'
+// typeof value
+// value = 10
+// Number.parseInt(value)
+// parseInt(value)
+// parseInt(value) + 10
+// parseInt(value) + 10 +'px'
+
 // console.dir(Number)하면 Number의 기능들을 알 수 있음
 // 단위 제거
 // ...
+console.log(parseInt('24px'))
+console.log(parseFloat('1.625rem'))
+console.log(parseInt('277mm'))
 
 // 단위 제거 함수 작성
 // ...
+
+// 1. 함수 기능 고민 (parseInt('24px'))
+// 2. 적절한 함수 이름 작성 (removeUnit(unitValue) : unitValue는 string값으로 하고 number로 반환)
+// 3. 함수 기능 구현
+function removeUnit(unitValue) {
+  // console.log(unitValue)
+
+  // const valueResualt = parseInt(unitValue)
+  // console.log(valueResualt = parseInt(unitValue)
+  return parseInt(unitValue)
+}
+
+console.log(removeUnit('20px'))
+
+// const removeUnit = function(unitValue) {
+//   return parseInt(unitValue)
+// }
+
+// console.log(removeUnit('1.5rem'))
+// 4. 반환값 설계 (16진수 문자열)
+// 5. 테스트 (함수 호출 정상 작동 검사)
 
 
 // 2진수 문자열 -> 10진수 변경
 // ...
 
+// 'ff'
+// (255).toString('ff')
+// parseInt('ff')
+// parseInt('ff', 16)
+// parseFloat('ff', 16)
+
 // 16진수 문자열 -> 10진수 변경
 // ...
 
 // 16진수 문자열을 10진수로 변경하는 함수 작성
-// ...
+// 1. 함수 기능 고민 (parseFloat('ff', 10))
+// 2. 적절한 함수 이름 작성 (fromHexadecimal(hexValue))
+// 3. 함수 기능 구현
+// 4. 반환값 설계 (16진수 문자열)
+// 5. 테스트 (함수 호출 정상 작동 검사)
+
+function fromHexadecimal(hexValue) {
+  return parseInt(hexValue, 16)
+}
+
+console.log(fromHexadecimal('ff'))
+
+

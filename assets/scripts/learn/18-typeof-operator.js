@@ -35,7 +35,5 @@ console.log(typeof o.isNotDefined)
 console.log(typeof o.empty)
 console.log(typeof o.symbol)
 console.log(typeof o.int)
-<<<<<<< HEAD
-=======
 
->>>>>>> 660cfd203d309d13f7992caca64b635b62ef63ef
+
