@@ -47,8 +47,18 @@ function getMoney(price/*필수*/, unit/*옵션*/) {
 let moneyKR = getMoney(5000 + 2000 + 1500 + 500) // '10000원'
 let moneyUS = getMoney(10.5 + 90 - 20 + 0.25, '달러') // '$80.75'
 
-console.log(moneyKR)
-console.log(moneyUS)
+
+// function getMoney(price, unit) {
+//   if (!unit) unit = '원'
+//   if (unit === '달러') return '$' + price
+//   return price + unit
+// }
+
+// let moneyKR = getMoney(5000 + 2000 + 1500 + 500) 
+// let moneyUS = getMoney(10.5 + 90 - 20 + 0.25, '달러') 
+
+// console.log(moneyKR)
+// console.log(moneyUS)
 
 
 
