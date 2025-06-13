@@ -133,3 +133,4 @@ console.log(document.getElementById('')) // 고유성이라서 s가 안붙음
 // Document.getElementsByClassName(className)
 const items = document.getElementsByClassName('item')
 console.log(items)
+
