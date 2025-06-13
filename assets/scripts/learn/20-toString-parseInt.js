@@ -8,6 +8,15 @@
 // 타입 변경
 // ...
 
+// let isLoggedIn = true
+// typeof isLoggedIn
+// isLoggedIn
+// isLoggedIn.toString
+
+// unknown.toString 객체가 아니라서 문자로 바꿀수 없다
+// unknown + ''
+console.log('this is a string'.toString())
+console.log()
 
 // 10진수 -> 2진수 변경
 // ...
@@ -17,7 +26,28 @@
 
 // 10진수를 2진수 또는 16진수로 변경하는 함수 작성
 // ...
+// 10진수를 2, 8, 16 진수로 변경하는 함수
+// 1. 함수기능 고민
+// 10진수.toString(16)
+// 2. 적절한 함수 이름 작성
+// toHex
+// 3. 함수 기능 구현
+function toHex(num) {
+  return num.toString(16)
+}
 
+console.log(toHex(255) === 'ff')
+// 4. 반환값 설계(16진수 문자열)
+// 5. 테스트
+
+// const toHex = (num) => num.toString(16)
+// console.log(toHex(255) === 'ff')
+
+// const toHex = functin(n) {
+  //   return num.toString(16)
+//   return num.toString(16)
+  // }
+// console.log(toHex(255) === 'ff')
 
 // --------------------------------------------------------------------------
 // 📌 parseInt(string, radix?)
@@ -26,6 +56,7 @@
 // - 2 또는 16진수 문자열을 10진수로 변경
 // --------------------------------------------------------------------------
 
+// console.dir(Number)하면 Number의 기능들을 알 수 있음
 // 단위 제거
 // ...
 
