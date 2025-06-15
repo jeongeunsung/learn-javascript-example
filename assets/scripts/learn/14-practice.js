@@ -34,6 +34,7 @@ book.getAuthors = function () {
 console.log(book.getAuthors)
 console.log(book.getAuthors())
 
+
 // 7. 객체의 메서드에 매개변수를 추가하고, 이 메서드를 호출해봅니다.
 book.getPrice = function (unit) {
   return '16,200' + unit
@@ -48,3 +49,30 @@ delete book['page count']
 console.log(book)
 book.pageCount = 180
 console.log(book)
+
+book = {
+  name: '언어의 온도',
+  getBook: function() {
+    return {
+      getName: '책 가지다'
+    }
+  }
+}
+
+book.getBook = function() {
+  return {
+    getName: '책 가지다'
+  }
+}
+
+book.pageCount = 30
+book['goong chaek'] = false
+book.name = '공주'
+book['goong chaek'] = true
+delete book.pageCount
+
+console.log(book.name)
+console.log(book.pageCount)
+console.log(book['goong chaek'])
+console.log(book.getBook)
+console.log(book.getBook().getName)
