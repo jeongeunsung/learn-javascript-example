@@ -105,4 +105,13 @@ else {
   console.log(신호등불빛색 + '은 신호등 불빛색 중에 없어요.')
 }
 
+console.log(Boolean(false))
+console.log(Boolean(undefined))
+console.log(Boolean(''))
+console.log(Boolean(null))
+console.log(Boolean(0))
+console.log(Boolean(NaN))
+
+
+
 
