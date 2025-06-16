@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/styles/main.css" />
     <link rel="icon" href="./assets/images/ecmascript-logo.png" />
-    <script type="module" src="./assets/scripts/learn/18-typeof-operator.js"></script>
+    <script type="module" src="./assets/scripts/learn/26-change-class-properties.js"></script>
   </head>
 
   <body>
@@ -26,6 +26,37 @@
       <li class="character master-choi" data-type="master">최강림</li>
       <li class="character villain-ghost" data-type="villain">악령</li>
     </ul>
+
+    <div id="demo">
+      <p class="add">
+        단락에 "text-primary" 클래스 이름을 추가해 주세요!
+      </p>
+      <script>
+        const element = document.getElementById('demo')
+          .querySelector('.add')
+  
+        element.classList.add('text-primary')
+        console.log(element.classList.value)
+        console.log(element.classList.length)
+      </script>
+
+      <p class="remove">
+        단락에서 "remove" 클래스 이름을 제거해 주세요!
+      </p>
+
+      <p class="contains1">
+        단락은 "text-primary" 클래스 이름을 가지고 있나요?
+      </p>
+
+      <p class="contains2 text-primary">
+        단락은 "text-primary" 클래스 이름을 가지고 있나요?
+      </p>
+
+      <p class="toggle">
+        단락은 "text-primary" 이름을 가지고 있나요?
+        있다면 삭제하고, 없다면 추가해 주세요.
+      </p>
+    </div>
 
     <form>
       <div>
