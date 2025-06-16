@@ -23,7 +23,8 @@ body {
   color: var(--blue-100);
 
   &.is-active {
-    background-color: var(--blue-500);
+    background-color: var(--blue-100);
+    color: var(--blue-800);
   }
 }
 
