@@ -149,17 +149,24 @@ document.querySelector('li').className += ' newClassName'
 // // 위에 if문 사용안해도 할 수 있는 방법 toggle를 사용해서 한줄로 할수 있음
 // choi.classList.toogle('active')
 
-const add = document.querySelector('.add')
+// const add = document.querySelector('.add')
 
-console.log(add.classList)
-add.classList.add('text-primary')
-console.log(add.classList.value)
-console.log(add.classList.length)
-add.classList.remove("")
+// console.log(add.classList)
+// add.classList.add('text-primary')
+// console.log(add.classList.value)
+// console.log(add.classList.length)
+// add.classList.remove("")
 
 /* {} 블록스코프를 넣으면 변수명과 상수명이 같이 있어도 블록스코프 안에서만 찾기 때문에 오류나지 않음
 {
   const add = document.querySelector('.add')
   console.log(add.classList)
 } */
+
+  // 
+// 전달한 함수의 이름을 부르면 실행됨
+// 그런데 언제 저 함수의 이름을 부를까?
+// 이벤트 (사건)
+
+
 

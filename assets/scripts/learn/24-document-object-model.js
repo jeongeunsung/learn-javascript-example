@@ -10,6 +10,7 @@
 // let emailInput = document.getElementById('useremail') // 데이터 타입 객체
 // console.log(emailInput)
 
+// input요소의 name을 말하는거
 // Document.getElementsByName(name)
 // console.log(document.getElementsByName('email'))
 
@@ -30,7 +31,7 @@ const elementByTagName = document.querySelector('h1')
 // console.log(elementByTagName)
 
 // Document {}
-const app = document.getElementById('app') // 성능 면에서 더 낫다 (더 빠르다)
+const app = document.getElementById('app') // 아래 querySelector로 찾는 것 보다 getElementById로 찾는게 성능 면에서 더 낫다 (더 빠르다)
 // const appElement = document.querySelector('#app')
 
 // Element.querySelector(selector)

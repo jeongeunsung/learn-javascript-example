@@ -7,13 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/styles/main.css" />
     <link rel="icon" href="./assets/images/ecmascript-logo.png" />
-    <script type="module" src="./assets/scripts/learn/26-change-class-properties.js"></script>
+    <!-- <script type="module" src="./assets/scripts/learn/26-change-class-properties.js"></script> -->
   </head>
 
   <body>
     <h1 lang="en">JavaScript</h1>
 
-    <ul>
+    <!-- <ul>
       <li><a href="">JavaScript</a></li>
       <li><a href="">html</a></li>
       <li><a href="">css</a></li>
@@ -30,7 +30,7 @@
     <div id="demo">
       <p class="add">
         단락에 "text-primary" 클래스 이름을 추가해 주세요!
-      </p>
+      </p> -->
       <script>
         // const element = document.getElementById('demo')
         //   .querySelector('.add')
@@ -38,17 +38,17 @@
         // element.classList.add('text-primary')
         // console.log(element.classList.value)
         // console.log(element.classList.length)
-        {
-          const element = document.getElementById('demo')
-            .querySelector('.add')
+        // {
+        //   const element = document.getElementById('demo')
+        //     .querySelector('.add')
     
-          element.classList.add('text-primary')
-          // console.log(element.classList.value)
-          // console.log(element.classList.length)
-        }
+        //   element.classList.add('text-primary')
+        //   // console.log(element.classList.value)
+        //   // console.log(element.classList.length)
+        // }
       </script>
 
-      <p class="remove">
+      <!-- <p class="remove">
         단락에서 "remove" 클래스 이름을 제거해 주세요!
       </p>
       <script>
@@ -100,42 +100,95 @@
         <input type="email" id="useremail" name="email" placeholder="user@company.io" />
       </div>
       <button type="submit">보내기</button>
-    </form>
+    </form> -->
     <script>
       // 1. id 속성으로 DOM 요소를 선택하여 콘솔 패널에 출력해봅니다.
-      const exorcists = document.getElementById('exorcist-characters')
+      // const exorcists = document.getElementById('exorcist-characters')
 
-      // 2. id 속성으로 선택한 DOM 요소에서 다음을 수행하세요.
-      //     1. 태그 또는 클래스 이름, 속성 이름/값 등을 사용해 "박요한"을 선택해보세요.
-      console.log(exorcists.querySelector('.yo-han'))
-      console.log(exorcists.querySelector('[data-type="hero"]'))
-      //     2. 태그 또는 클래스 이름, 속성 이름/값 등을 사용해 "최강림"을 선택해보세요.
-      console.log(exorcists.querySelector('.master-choi'))
-      console.log(exorcists.querySelector('[data-type="master"]'))
-      //     3. 태그 또는 클래스 이름, 속성 이름/값 등을 사용해 "악령"을 선택해보세요.
-      console.log(exorcists.querySelector('.villain-ghost'))
-      console.log(exorcists.querySelector('[data-type="villain"]'))
+      // // 2. id 속성으로 선택한 DOM 요소에서 다음을 수행하세요.
+      // //     1. 태그 또는 클래스 이름, 속성 이름/값 등을 사용해 "박요한"을 선택해보세요.
+      // console.log(exorcists.querySelector('.yo-han'))
+      // console.log(exorcists.querySelector('[data-type="hero"]'))
+      // //     2. 태그 또는 클래스 이름, 속성 이름/값 등을 사용해 "최강림"을 선택해보세요.
+      // console.log(exorcists.querySelector('.master-choi'))
+      // console.log(exorcists.querySelector('[data-type="master"]'))
+      // //     3. 태그 또는 클래스 이름, 속성 이름/값 등을 사용해 "악령"을 선택해보세요.
+      // console.log(exorcists.querySelector('.villain-ghost'))
+      // console.log(exorcists.querySelector('[data-type="villain"]'))
     </script>
       <script>
-        {
-          const toggleElement = document.querySelector('#demo .toggle')
-          console.log(toggleElement.classList.value)
+        // {
+        //   const toggleElement = document.querySelector('#demo .toggle')
+        //   console.log(toggleElement.classList.value)
           
-          toggleElement.classList.toggle('text-primary')
+        //   toggleElement.classList.toggle('text-primary')
 
-          // if (toggleElement.classList.contains('text-primary')) {
-          //   toggleElement.classList.remove('text-primary')
-          // } else {
-          //   toggleElement.classList.add('text-primary')
-          // }
+        //   // if (toggleElement.classList.contains('text-primary')) {
+        //   //   toggleElement.classList.remove('text-primary')
+        //   // } else {
+        //   //   toggleElement.classList.add('text-primary')
+        //   // }
           
-          console.log(toggleElement.classList.value)
-        }
+        //   console.log(toggleElement.classList.value)
+        // }
       </script>
 
     </div>
 
-    <script src="./assets/scripts/learn/26-change-class-properties.js"></script>
+    <button type="button" class="clickable">클릭 가능한 요소</button>
+
+    <script>
+      // {
+      //   // 이벤트 연결 하는 내부에 화살표 함수 표현식을 씀
+      //   const clickable_button = document.querySelector('.clickable')
+      //   console.log(clickable_button)
+      //   clickable_button.addEventListener('click', () => {console.log('clicked clickable button')})
+      // }
+    </script>
+    <script>
+      {
+        const clickable_button = document.querySelector('.clickable')
+        // console.log(clickable_button)
+        clickable_button.addEventListener(
+          'click'/* event type (string)*/, 
+          // function() {} /* event listener (function) */
+          () => {
+            console.log('clicked clickable button')
+          }
+        )
+      }
+
+      // 개발자도구 콘솔탭에서 getEventListeners 입력해보기 그럼 getEventListeners(clickable_button)
+
+      // js 함수 만드는 방법 3가지
+      // 1. 함수 선언
+      // function 함수이름() {}
+      // 2. 함수 표현식 (값이 변수에 할당되어서 표현식이라고함)
+      // const 함수표현식 = function() {}
+      // 3. 화살표 함수 표현식 (함수값이 변수에 할당되어서 표현식이라고함)
+      // const 화살표함수표현식 = () => {}
+
+      // document.body로 찾으면 body 요소 바로 찾을수 잇음
+      // document.documentElement로 찾으면 html 요소 찾을 수 있음
+      // document.head 로 찾으면 head 찾을 수 있음
+    </script>
+
+    <script>
+      {
+        const clickable_button = document.querySelector('.clickable')
+        const body = document.body
+
+        clickable_button.addEventListener('click', () => {
+          // body 요소에 is-active 클래스 이름 추가
+          body.classList.add('is-active')
+          // .clickable_button 요소에 is-active 클래스 이름 추가
+          clickable_button.classList.add('is-active')
+        })
+      }
+    </script>
+
+    <!-- 아래 쓰거나 위에 type="module" 사용하거나
+     <script src="./assets/scripts/learn/26-change-class-properties.js"></script> -->
 
   </body>
 
