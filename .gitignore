@@ -4,9 +4,10 @@
 .DS_Store
 =======
 ### Custom ###
-01-off-canvas
-02-modal-dialog
+# 01-off-canvas
+# 02-modal-dialog
 practice
+prettier.*
 
 >>>>>>> 79ccb3674db342e1b71a9e42638cb1bd545ca026
 ### Node ###
