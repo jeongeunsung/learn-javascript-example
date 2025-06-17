@@ -1,0 +1,27 @@
+.offsite-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: -14rem;
+  width: 14rem;
+  background-color: var(--menu-background-color);
+}
+
+.site-container {
+  padding-top: 3rem;
+  padding-left: 2.5rem;
+  max-width: 33rem;
+}
+
+/* body 클릭하면 is-active 클래스 추가 */
+.is-active {
+  .offsite-container {
+    left: 0;
+  }
+
+  .site-container {
+    padding-left: 16.25rem;
+  }
+}
+
+
