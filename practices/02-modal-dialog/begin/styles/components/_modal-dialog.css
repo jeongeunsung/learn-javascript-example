@@ -1,0 +1,113 @@
+.point-hand {
+  position: absolute;
+  left: 0;
+  right: 0;
+  max-inline-size: 3em;
+  margin: 1em auto 0;
+  color: var(--modal-text-color);
+}
+
+.modal-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  background-color: var(--modal-overlay-background-color);
+
+  .modal-dialog {
+    display: grid;
+    place-items: center;
+    position: relative;
+    border-radius: 4px;
+    background-color: var(--dialog-background-color);
+    box-shadow: 0 2px 4px 2px var(--modal-shadow-color);
+    color: var(--modal-text-color);
+    min-inline-size: 50vmin;
+    min-block-size: 50vmin;
+  }
+
+  .modal-close-button {
+    .modal-dialog:hover & {
+      opacity: 1;
+    }
+
+    opacity: 0;
+    position: absolute;
+    top: -1.5em;
+    right: -1.5em;
+    padding: 1em 1em;
+    font-size: 0.6em;
+    border-radius: 50%;
+    border: 2px solid var(--dialog-close-button-background-color);
+    background: var(--dialog-close-button-background-color);
+    color: var(--dialog-close-button-color);
+
+    &:hover,
+    &:active,
+    &:focus {
+      opacity: 1;
+      background: var(--dialog-close-button-hover-background-color);
+      border-color: var(--dialog-close-button-hover-background-color);
+    }
+  }
+}
+
+.modal-is-open {
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 99;
+  }
+}
+
+/* non-modal-dialog */
+/* html font-size: 120% -> 16px(기본글자크기) × 1.2 = 19.2px */
+.dialog {
+  position: fixed;
+  inset: auto 0 0 1.875rem;
+  background-color: #070611;
+  inline-size: 18.75em; /* 360 / 19.2 = */
+  block-size: 20.8334em; /* 400 / 19.2 = 20.833 */
+  border-radius: 16px 16px 0px 0px;
+
+  &.is-hidden {
+    display: none;
+  }
+
+  .dialog-content {
+    position: relative;
+    padding-block: 60px 18px;
+
+    .more-button-box {
+      padding-inline: 23px;
+    }
+
+    .more-button {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center;
+      border-radius: 8px;
+      background-color: #8EC3FA;
+      inline-size: 100%;
+      block-size: 2.292em;
+      color: #070611;
+      font-weight: 700;
+      line-height: 1.13;
+      text-align: center;
+      text-decoration: none;
+    }
+  }
+
+  .dialog-close-button {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    border: 0;
+    background: url("../../images/close-button.svg") no-repeat;
+    aspect-ratio: 1;
+    background-position: center;
+  }
+  
+}
+
