@@ -54,3 +54,10 @@ while (wantToDraw) {
   
   n += 1
 }
+
+let userInput = prompt("1부터 10까지 숫자를 입력하세요")
+userInput = Number.parseInt(userInput, 10)
+
+console.log(userInput + 10, typeof userInput)
+
+
