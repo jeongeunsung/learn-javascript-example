@@ -5,10 +5,13 @@
 =======
 ### Custom ###
 NOTICE.md
-03-accordion
-04-tabs
-practice
+FEEDBACK.md
 prettier.*
+04-tabs
+05-carousel
+06-accordion-event-delegation
+07-tabs-event-delegation
+08-carousel-event-delegation
 
 >>>>>>> 79ccb3674db342e1b71a9e42638cb1bd545ca026
 ### Node ###
