@@ -450,14 +450,27 @@
 })
 
 ;(() => {
+  
   const h1 = document.querySelector('h1')
   
-  // 속성 추가(쓰기)
-  // - id="heading"
-  // - class="headline headline__level--1"
-  // - title="자바스크립트"
-  // - data-role="headline"
-  // - data-level="1"
+// 속성 추가(쓰기)
+// - id="heading"
+h1.setAttribute('id', 'heading')
+// - class="headline headline__level--1"
+h1.setAttribute('class', 'headline headline__level--1')
+// - title="자바스크립트"
+h1.setAttribute('title', '자바스크립트')
+// - data-role="headline"
+h1.setAttribute('data-role', 'headline')
+// - data-level="1"
+h1.setAttribute('data-level', '1')
+
+// 속성 읽기
+// - id
+// - class
+// - title
+// - data-role
+// - data-level
 })()
 
 {
