@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+	<head>
+	  <meta charset="UTF-8" />
+	  <title>글자, 배경 색상 조절</title>
+    <script src="/assets/scripts/utils/css.js"></script>
+	  <style>
+	    .text {
+	      padding: 1rem;
+	      font-size: 1.5rem;
+	      text-align: center;
+	      color: #000000;
+	      background-color: #ffffff;
+	    }
+	
+	    .controls {
+	      margin-top: 2rem;
+	      display: flex;
+	      gap: 2rem;
+	      justify-content: center;
+	      align-items: center;
+	    }
+	
+	    label {
+	      font-size: 14px;
+	    }
+	
+	    input[type="color"] {
+	      width: 60px;
+	      height: 30px;
+	      border: none;
+	      padding: 0;
+	      cursor: pointer;
+	    }
+	  </style>
+	</head>
+	<body>
+
+	  <div class="controls">
+	    <label for="textColor">
+	      글자색
+	      <input type="color" id="textColor" value="#000000" />
+	    </label>
+	
+	    <label for="backgroundColor">
+		    배경색
+	      <input type="color" id="backgroundColor" value="#ffffff" />
+	    </label>
+	  </div>
+
+	  <p class="text">이 텍스트의 글자 크기를 조절해 보세요!</p>
+		
+    <script>
+      {
+        // ## 글자 및 배경 색상 조절
+        // 레인지(range) 인풋 값이 변경되면 `.text` 요소의 글자 크기가 변경되도록 구현합니다.
+
+        // 텍스트 엘리먼트 찾기
+        const textElement = document.querySelector('.text')
+        // 텍스트 엘리먼트에서 전경(foreground)/배경(background-color) 색상 값 읽기
+        const foregroundColor = css(textElement, 'color')
+        console.log(foregroundColor)
+        const backgroundColor = css(textElement, 'background-color')
+        console.log(backgroundColor)
+
+        // 컬러 인풋 엘리먼트 찾기
+        const fgInput 
+
+
+        const constrolsBox = document.querySelector('.controls')
+        console.log(constrolsBox)
+
+        const textColor = document.getElementById('textColor')
+        console.log(textColor.style)
+        const colorStyle = css(textColor, color)
+        console.log(colorStyle)
+        const backgroundColor = document.getElementById('backgroundColor')
+        console.log(backgroundColor)
+
+
+        constrolsBox.addEventListener('change', () => {
+          // textColor.css
+        })
+      }
+    </script>   
+	</body>
+</html>
