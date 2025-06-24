@@ -6,34 +6,34 @@
 ;(() => {
   // DOM 요소의 classList 속성의 메서드를 사용해 클래스 이름을 추가, 제거, 포함 여부 확인, 토글 해보세요.
 
-  const addClassEvent = document.querySelector('.add')
+  // const addClassEvent = document.querySelector('.add')
   
-  addClassEvent.classList.add('active', 'remove', 'contains1', 'contains2', 'text-primary', 'toggle')
-  addClassEvent.classList.remove('remove')
-  console.log(addClassEvent)
-  console.log(addClassEvent.classList.value)
-  if(addClassEvent.classList.contains('contains1')) {
-    console.log(true)
-  } else {
-    console.log(false)
-  }
+  // addClassEvent.classList.add('active', 'remove', 'contains1', 'contains2', 'text-primary', 'toggle')
+  // addClassEvent.classList.remove('remove')
+  // console.log(addClassEvent)
+  // console.log(addClassEvent.classList.value)
+  // if(addClassEvent.classList.contains('contains1')) {
+  //   console.log(true)
+  // } else {
+  //   console.log(false)
+  // }
 
-  const navToggleClassName = document.querySelector('a')
-  console.log(navToggleClassName)
-  navToggleClassName.addEventListener('click', () => {
-    navToggleClassName.classList.toggle('toggle')
-    console.log(navToggleClassName)
-  })
+  // const navToggleClassName = document.querySelector('a')
+  // console.log(navToggleClassName)
+  // navToggleClassName.addEventListener('click', () => {
+  //   navToggleClassName.classList.toggle('toggle')
+  //   console.log(navToggleClassName)
+  // })
 
 })
 
 ;(() => {
   // 1. 버튼과 body 찍히는지 콘솔에 찍어보고 상수명에 담기
-  {
-    const clickButton = document.querySelector('.button')
-    console.log(clickButton)
-    const activeBodyName = document.body
-    console.log(activeBodyName)
+  // {
+  //   const clickButton = document.querySelector('.button')
+  //   console.log(clickButton)
+  //   const activeBodyName = document.body
+  //   console.log(activeBodyName)
 
     // 2. 버튼과 body에 is-actrive 추가, 제거 만들어서 console.log로 클래스가 추가 되었는지 value로 값을 확인하기
     // clickButton.classList.add('active')
@@ -50,21 +50,21 @@
     // console.log(activeBodyName.classList.value)
 
     // 3. addEventListener을 사용하여 버튼을 클릭하면 is-active 가지고 있는 얘들한테 is-active 추가하고 아니면 제거해라
-    clickButton.addEventListener('click', () => {
-      if(activeBodyName.classList.contains('active')) {
-        clickButton.classList.remove('active')
-        activeBodyName.classList.remove('active')
-      } else {
-        clickButton.classList.add('active')
-        activeBodyName.classList.add('active')
-      }
-    })
-  }
+  //   clickButton.addEventListener('click', () => {
+  //     if(activeBodyName.classList.contains('active')) {
+  //       clickButton.classList.remove('active')
+  //       activeBodyName.classList.remove('active')
+  //     } else {
+  //       clickButton.classList.add('active')
+  //       activeBodyName.classList.add('active')
+  //     }
+  //   })
+  // }
 
-  {
-    // console.log(document.querySelector(".clickable"));
-    const clickable_button = document.querySelector(".clickable");
-    const activeBody = document.body;
+  // {
+  //   // console.log(document.querySelector(".clickable"));
+  //   const clickable_button = document.querySelector(".clickable");
+  //   const activeBody = document.body;
 
     // // 2. 버튼과 body에 is-actrive 추가, 제거 만들어서 console.log로 클래스가 추가 되었는지 value로 값을 확인하기
     // clickable_button.classList.add("is-active");
@@ -78,19 +78,19 @@
     // console.log(activeBody.classList.value);
 
     // // 3. addEventListener을 사용하여 버튼을 클릭하면 is-active 가지고 있는 얘들한테 is-active 추가하고 아니면 제거해라
-    clickable_button.addEventListener("click", () => {
-      if (activeBody.classList.contains("is-active")) {
-        clickable_button.classList.remove("is-active");
-        activeBody.classList.remove("is-active");
-      } else {
-        clickable_button.classList.add("is-active");
-        activeBody.classList.add("is-active");
-      }
-    });
-  }
+  //   clickable_button.addEventListener("click", () => {
+  //     if (activeBody.classList.contains("is-active")) {
+  //       clickable_button.classList.remove("is-active");
+  //       activeBody.classList.remove("is-active");
+  //     } else {
+  //       clickable_button.classList.add("is-active");
+  //       activeBody.classList.add("is-active");
+  //     }
+  //   });
+  // }
 
   
-})()
+})
 
 ;(() => {
   // 이벤트 리스너를 DOM 요소에 추가하고 기능을 구현하는 연습을 진행하세요.
@@ -99,11 +99,11 @@
 
   // 1. 요소에 클릭 이벤트 리스너를 작성하세요.
   // 요소가 클릭될 때마다 콘솔 패널에 메시지가 출력되도록 합니다.
-  const buttonClick = document.querySelector('.button')
-  console.log(buttonClick)
-  buttonClick.addEventListener('click', () => {
-    console.log('click')
-  })
+  // const buttonClick = document.querySelector('.button')
+  // console.log(buttonClick)
+  // buttonClick.addEventListener('click', () => {
+  //   console.log('click')
+  // })
   
   // 2. 개발 도구에서 리스너의 존재를 확인해봅니다. 콘솔에서 getEventListeners(요소) 찍어봐야함
 
@@ -172,66 +172,66 @@
 
   // <script src="main.js"></script> <!-- ✅ -->
 
-  function handleClick() {
-    console.log('레거시')
-  }
+  // function handleClick() {
+  //   console.log('레거시')
+  // }
 
-  window.handleClick = handleClick;
+  // window.handleClick = handleClick;
 
-  // 5. 버튼을 클릭하는 이벤트 리스너 화살표 함수를 추가한다, 그리고 콜백함수에서 이벤트 객체를 받는다.
-  buttonClick.addEventListener('click', (e) => {
-    console.log('이벤트 객체: ', e)
-  })
+  // // 5. 버튼을 클릭하는 이벤트 리스너 화살표 함수를 추가한다, 그리고 콜백함수에서 이벤트 객체를 받는다.
+  // buttonClick.addEventListener('click', (e) => {
+  //   console.log('이벤트 객체: ', e)
+  // })
 
 })
 
 ;(() => {
-  const macbookPro = {
-    processor: '2.4 Ghz 7코더',
-    memory: '64GB 2667',
-    macOS: 'Sequoia 15.4',
-    playMusic: function(soneTitle) {
-      console.log('"' + soneTitle + '"재생을 시작합니다.')
-    }
-  }
+//   const macbookPro = {
+//     processor: '2.4 Ghz 7코더',
+//     memory: '64GB 2667',
+//     macOS: 'Sequoia 15.4',
+//     playMusic: function(soneTitle) {
+//       console.log('"' + soneTitle + '"재생을 시작합니다.')
+//     }
+//   }
 
-  console.log(macbookPro.memory)
-  let name = '성정은'
-  console.log(macbookPro[name]) // name에 대한 속성이 없기 때문에 undefined가 나옴
-  let properyName = 'macOS'
-  console.log(properyName)
-  console.log(macbookPro[properyName])
+//   console.log(macbookPro.memory)
+//   let name = '성정은'
+//   console.log(macbookPro[name]) // name에 대한 속성이 없기 때문에 undefined가 나옴
+//   let properyName = 'macOS'
+//   console.log(properyName)
+//   console.log(macbookPro[properyName])
 
-  macbookPro.stroge = '2Tb'
-  macbookPro['usbPort'] = 4
-  console.log(macbookPro)
+//   macbookPro.stroge = '2Tb'
+//   macbookPro['usbPort'] = 4
+//   console.log(macbookPro)
   
-  delete macbookPro.stroge
-  console.log(macbookPro)
+//   delete macbookPro.stroge
+//   console.log(macbookPro)
 
-  delete macbookPro['usbPort']
-  console.log(macbookPro)
+//   delete macbookPro['usbPort']
+//   console.log(macbookPro)
   
-  macbookPro.playMusic('이별이야기')
+//   macbookPro.playMusic('이별이야기')
 
-  function cache() {}
+//   function cache() {}
 
-  cache.data = '캐싱된 데이터'
-  console.log(cache.data)
+//   cache.data = '캐싱된 데이터'
+//   console.log(cache.data)
 
-  function makeAdder(x) {
-    return function(y) {
-      return x + y;
-    };
-  }
+//   function makeAdder(x) {
+//     return function(y) {
+//       return x + y;
+//     };
+//   }
 
-  let add5 = makeAdder(5);
-  console.log(add5(3));
-})
+//   let add5 = makeAdder(5);
+//   console.log(add5(3));
+// })
 
-;(() => {
-  Element.addEventListelner('mouseenter', function() {})
-  Element.addEventListener('click', () => {})
+// ;(() => {
+//   Element.addEventListelner('mouseenter', function() {})
+//   Element.addEventListener('click', () => {})
 
 })
 
@@ -242,13 +242,13 @@
   // 네가티그 인덱스를 지원하지 않음 (음수값으로는 지원하지 않음 -1 그래서 null이 나옴 마지막을 선택할려면 paragraphs.length - 1로 해줘야지 나옴)
   // Loop (반복, 순환)
 
-  // - while
-  let i = 0, l = paragraphs.length
-  while (i < l) {
-    const paragraphElement = paragraphs.item(i)
-    console.log(paragraphElement)
-    ++i
-  }
+  // // - while
+  // let i = 0, l = paragraphs.length
+  // while (i < l) {
+  //   const paragraphElement = paragraphs.item(i)
+  //   console.log(paragraphElement)
+  //   ++i
+  // }
 
   // - do...while
 
@@ -314,40 +314,40 @@
   //   </div>
 
   //   1. 좋은 사람(Good Guy)을 모두 선택하세요.
-  const googuyElement = document.querySelectorAll('[data-type="good-guy"]')
-  // 2. 좋은 사람(Good Guy) 모두에게 `excellent` 클래스 이름을 추가하세요.
-  for (const guy of goodGuyList) {
-    guy.classList.add('excellent')
-  }
+  // const googuyElement = document.querySelectorAll('[data-type="good-guy"]')
+  // // 2. 좋은 사람(Good Guy) 모두에게 `excellent` 클래스 이름을 추가하세요.
+  // for (const guy of goodGuyList) {
+  //   guy.classList.add('excellent')
+  // }
 
-  googuyElement.forEach((guy) => {
-    guy.classList.add('excellent')
-  })
-  console.log(googuyElement)
-  // 3. 빌런(Villain)을 모두 선택하세요.
-  const villainList = document.querySelectorAll('[data-type="villain"]')
-  console.log(villainList)
-  // 4. 빌런 모두에게 `naughty` 클래스 이름을 추가하세요.
-  // let i = 0, l = villainList.lentgth
+  // googuyElement.forEach((guy) => {
+  //   guy.classList.add('excellent')
+  // })
+  // console.log(googuyElement)
+  // // 3. 빌런(Villain)을 모두 선택하세요.
+  // const villainList = document.querySelectorAll('[data-type="villain"]')
+  // console.log(villainList)
+  // // 4. 빌런 모두에게 `naughty` 클래스 이름을 추가하세요.
+  // // let i = 0, l = villainList.lentgth
 
-  // for(; i < l;) {
+  // // for(; i < l;) {
+  // //   const villain = villainList[i]
+  // //   villain.classList.add('naughty')
+  // // } 
+
+  // for(let i = 0, l = villainList.lentgth; i < l; i += 1) {
   //   const villain = villainList[i]
   //   villain.classList.add('naughty')
-  // } 
+  // }
+  // // 5. 모든 캐릭터(Character)를 선택하세요.
+  // // const allCharacters = starWars.querySelectorAll('*')
+  // const allCharacters = starWars.querySelectorAll('[data-type]')
+  // console.log(allCharacters)
 
-  for(let i = 0, l = villainList.lentgth; i < l; i += 1) {
-    const villain = villainList[i]
-    villain.classList.add('naughty')
-  }
-  // 5. 모든 캐릭터(Character)를 선택하세요.
-  // const allCharacters = starWars.querySelectorAll('*')
-  const allCharacters = starWars.querySelectorAll('[data-type]')
-  console.log(allCharacters)
-
-  // 6. 모든 캐릭터에 `star-wars` 클래스 이름을 추가하세요.
-  allCharacters.forEach((c) => {
-    c.classList.add('star-wars')
-  })
+  // // 6. 모든 캐릭터에 `star-wars` 클래스 이름을 추가하세요.
+  // allCharacters.forEach((c) => {
+  //   c.classList.add('star-wars')
+  // })
 
   // NODE 타입은 다양하지만 사용하는것만 알면 됨
   // document.ELEMENT_NODE => 1 //ELEMENT_NODE 상수임
@@ -366,4 +366,105 @@
   // stRing/toLoserCase()
 
   // \n은 개행 \t는 탭키
+})
+
+// document.activeElement //초점 이동 확인하는 스크립트
+// $0
+// 다 탐색하게 하는것 보단 변수에 담아서 컴퓨터에 기억해놓고 꺼내 쓰는게 효율적임, 문서에서 매번 찾지 않아도 됨
+// 최적화는 직접 하지 않아도 최적화 도구를 이용해서 사용하면 됨
+
+// getPropertyValue는 css의 커스텀 속성을 사용할 수 있는데 옛날 방식()은 사용못함
+// set은 
+
+;(() => {
+  const element = document.querySelector('.element')
+  console.log(element)
+  console.dir(element)
+
+  const fontSize = element.style.fontSize
+  console.log(fontSize)
+  // console.table()
+  // 영어 소문자를 대문자로 변경해주는 단축키 아래 잇음
+  // view > command palette > uppercase 검색하면 transform to uppercase 단축키 보고 누르기
+  // design_is_all
+  // all_is_design
+})
+
+;(() => {
+  // 함수를 호출 할 때 인수를 모두 사용하지 않고 호출을 해도 상관이 없나요? 무조건 필수는 사용해야함 ?pseudoELemenet 물음표로 되어 있는건 옵션이라서 선택임
+  // getStyle(element, propertyName, ?pseudoELemenet): propertyValue
+  const element = document.querySelector('.element')
+  getStyle(element, 'font-weight')
+
+  console.log(element)
+  function getStyle(element, propertyName) {
+    const elementStyles = getComputedStyle(element)
+    const getElementStyles = elementStyles.getPropertyValue(propertyName)
+
+    // return을 안해주면 undefined가 나옴
+    console.log(getElementStyles)
+  }
+  
+  // setStyle(element, propertyName, propertyValue): element
+
+
+// css(element, propertyName, ?propertyValue): element`
+})
+
+;(() => {
+  // 저는 이렇게 해봤는데 강사님이 하신거랑 달라서... 혹시 괜찮은건가요?
+  function css(element, propertyName, propertyValue) {
+    const targetElement = document.querySelector(element);
+    const getPropertyValue =
+      getComputedStyle(targetElement).getPropertyValue(propertyName);
+    const setElementStyle = targetElement.style.setProperty(
+      propertyName,
+      propertyValue
+    );
+   
+    return getPropertyValue, setElementStyle;
+  }
+
+  css(".box", "color");
+  css(".box", "font-weight", "900");
+
+  // 아래 처럼 변경하기
+
+  function css(selector, propertyName, propertyValue) {
+    const targetElement = document.querySelector(selector);
+    const oldPropertyValue = getComputedStyle(targetElement).getPropertyValue(propertyName);
+    
+    targetElement.style.setProperty(propertyName, propertyValue);
+    const changedPropertyValue = getComputedStyle(targetElement).getPropertyValue(propertyName);
+  
+    return { oldValue: oldPropertyValue, newValue: changedPropertyValue };
+  }
+
+  // READ
+  css(".box", "color");
+  
+  // WRITE
+  css('.box', 'font-size', '240px');
+  
+  console.log(css(".box", "font-weight", "900"));
+})
+
+;(() => {
+  const h1 = document.querySelector('h1')
+  
+  // 속성 추가(쓰기)
+  // - id="heading"
+  // - class="headline headline__level--1"
+  // - title="자바스크립트"
+  // - data-role="headline"
+  // - data-level="1"
 })()
+
+{
+  // 외부로 부터 보호
+  // 블록 스코프를 이용해서
+
+  // html attributes에서 js property로 변경된다
+  // 네이티브 = 빌트인, 커스텀 속성 data-접두사
+  // 사용자가라는 말은 개발자가 라는 말임
+}
