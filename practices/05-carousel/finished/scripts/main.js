@@ -84,4 +84,4 @@
     contentWrapper.style.setProperty('transform', 'translateX(-'+ distance +')')
   })
 
-})()
+})

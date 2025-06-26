@@ -8,7 +8,7 @@
 // 속성 쓰기 사용법
 // const changedElement = attr(element, attributeName, attributeValue)
 function setAttribute(element, attributeName, attributeValue) {
-  element.style.setProperty(attributeName, attributeValue)
+  element.setProperty(attributeName, attributeValue)
   return element
   
 }

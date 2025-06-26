@@ -471,13 +471,202 @@ h1.setAttribute('data-level', '1')
 // - title
 // - data-role
 // - data-level
-})()
+})
 
-{
+;(() => {
   // 외부로 부터 보호
   // 블록 스코프를 이용해서
 
   // html attributes에서 js property로 변경된다
   // 네이티브 = 빌트인, 커스텀 속성 data-접두사
   // 사용자가라는 말은 개발자가 라는 말임
-}
+})
+
+;(() => {
+  console.log(pElement.attributes)
+  console.log(Array.from(pElement.attributes))
+
+  Array.from(pElement.attributes).forEach((attrObject) => {
+    pElement.removeAttribute(attrObject.name)
+  })
+})()
+
+;(() => {
+  const readBtn = document.getElementById('read')
+      const product = document.querySelector('.product')
+      const updateBtn = document.getElementById('update')
+      console.log(readBtn)
+      console.log(product)
+      console.log(updateBtn)
+
+      // 1. "속성 읽기" 버튼 클릭 시, 제품의 커스텀 속성을 읽어 콘솔 패널에 출력합니다. (`getAttribute` 활용)
+      readBtn.addEventListener('click', () => {
+        console.group('getAttribute')
+        const dataName = product.getAttribute('data-name')
+        const dataStock = product.getAttribute('data-stock')
+        console.log(dataName, typeof dataName)
+        console.log(dataStock, typeof dataStock)
+
+        console.groupEnd()
+      })
+      // 2. "속성 읽기" 버튼 클릭 시, 제품의 커스텀 속성을 읽어 콘솔 패널에 출력합니다. (`dataset` 활용)
+      readBtn.addEventListener('click', () => {
+        console.group('dataset')
+        const dataName = product.dataset.name
+        const dataStock = product.dataset.stock
+        console.dir(product)
+        console.log(dataName, typeof dataName)
+        console.log(dataStock, typeof dataStock)
+
+        console.groupEnd()
+      })
+      // 3. "재고 수정" 버튼 클릭 시, 현재 재고 값에 2를 더한 값으로 설정하고 "📦 재고: 5"로 화면에 반영합니다.
+      updateBtn.addEventListener('click', () => {
+        const stockNumber = parseInt(product.dataset.stock) + 2
+        
+        console.log(typeof stockNumber)
+      })
+
+      // 4. "속성 제거" 버튼 클릭 시, 제품 `data-stock` 속성을 제거하고, "📦 재고: 없음"으로 화면에 반영합니다.
+
+
+      // 자바스크립트의 객체는 값이 없으면 undefined를 나오게 하게 설계가 그렇게 되어 있다.
+      // 브라우저가 getAttribute와 getELementById는 값이 없을 경우 null이 나오게 설계가 그렇게 되어 있다
+})
+
+;(() => {
+  // $0은 h1태그를 말하는거
+  // DOMRect는 객체이고 웹브라우저에서
+})
+
+// 탐색하다 
+// 아래로 탐색 ( 자식 또는 자손 찾기)
+// 위로 탐색(부모 또는 조상 찾기)
+// 옆으로 탐색 (이전/다음 형제 찾기)
+// (document.body.childNodes : 문서 안에 body야 너의 모든 childNodes를 보여줘, 띄어쓰기(=공백)도 text노드임)
+// children은 어떤 노드를 수집할까? body 내부에 직접적인 자식 요소(직계 자식)들을 찾아온다 htmlColletcion으로 반환 받음(직계자식을 찾을때 많이 사용)
+// children과 childNodes 둘다 유사배열이라 배열 객체로 변경할 수 있음
+// Array.isArray는 배열이 맞냐라고 물어봄
+// children과 childNodes의 차이점
+
+// starWars.querSelectorAll
+// parentNode로 하면 #document 나옴
+// closest()은 자기도 포함
+
+;(() => {
+  // 1. `.card` 요소의 모든 자식 요소를 찾아 콘솔에 출력합니다.
+        // 2. `.card` 요소의 첫번째 자식 요소를 찾아 콘솔에 출력합니다.
+        // 3. `.card` 요소의 마지막 자식 요소를 찾아 콘솔에 출력합니다.
+        // 4. `.card__desc` 요소 내부의 모든 `<p>` 요소를 찾아 콘솔에 출력합니다.
+
+        const card = document.querySelector('.card')
+
+        console.log(card.children)
+        console.log(card.firstElementChild)
+        console.log(card.lastElementChild)
+        console.log(card.lastElementChild.children)
+
+
+        // 1. `closeButton`의 부모 요소를 탐색해 콘솔 패널에 출력합니다.
+        // 2. `closeButton`의 상위 요소 중, `.modal` 요소를 탐색해 콘솔 패널에 출력합니다.
+        const closeButton = document.querySelector('.modal__close')
+        console.log(closeButton.parentElement)
+        console.log(closeButton.closest('.modal'))
+
+        // 1. `activeItem`의 이전 형제 요소를 선택해 콘솔 패널에 출력합니다.
+        // 2. `activeItem`의 다음 형제 요소를 선택해 콘솔 패널에 출력합니다.
+        // 3. `"서비스"` 콘텐츠를 포함하는 형제 요소를 선택해 콘솔 패널에 출력합니다.
+        const activeItem = document.querySelector('.active')
+        console.log(activeItem.previousElementSibling.textContent)
+        console.log(activeItem.nextElementSibling.textContent)
+        console.log(activeItem.parentElement.children)
+})
+
+;(() => {
+  const productElement = document.querySelector('.product')
+        const readButton = document.getElementById('read')
+        const updateButton = document.getElementById('update')
+        const removeButton = document.getElementById('remove')
+        
+        // 1. "속성 읽기" 버튼 클릭 시, 제품의 커스텀 속성을 읽어 콘솔 패널에 출력합니다. (`getAttribute` 활용)
+        readButton.addEventListener('click', () => {
+          console.group('getAttribute')
+          const dataName = productElement.getAttribute('data-name')
+          console.log('데이터 이름 =', dataName, '타입 =', typeof dataName)
+          const dataStock = productElement.getAttribute('data-stock')
+          console.log('데이터 재고 =', dataStock, '타입 =', typeof dataStock)
+          console.groupEnd()
+        })
+
+        // 2. "속성 읽기" 버튼 클릭 시, 제품의 커스텀 속성을 읽어 콘솔 패널에 출력합니다. (`dataset` 활용)
+        readButton.addEventListener('click', () => {
+          console.group('dataset')
+          const dataName = productElement.dataset.name
+          console.log('데이터 이름 =', dataName, '타입 =', typeof dataName)
+          const dataStock = productElement.dataset.stock
+          console.log('데이터 재고 =', dataStock, '타입 =', typeof dataStock)
+          console.groupEnd()
+        })
+
+        // 3. "재고 수정" 버튼 클릭 시, 현재 재고 값에 2를 더한 값으로 설정하고 "📦 재고: 5"로 화면에 반영합니다.
+        updateButton.addEventListener('click', () => {
+          const stock = Number(productElement.dataset.stock)
+          const updateStockValue = stock + 2
+          productElement.dataset.stock = updateStockValue
+
+          // EventTarget -> Node -> Element -> HTMLElement -> HTMLSpanElement -> <span>
+          // <span> 요소는 Node이므로 Node 인터페이스의 textContent 사용 가능
+          const stockOutput = productElement.querySelector('.stock')
+          // Node의 textContent 읽기
+          console.log(stockOutput.textContent, typeof stockOutput.textContent)
+          // Node의 textContent 쓰기
+          stockOutput.textContent = updateStockValue
+        })
+
+        // 4. "속성 제거" 버튼 클릭 시, 제품 `data-stock` 속성을 제거하고, "📦 재고: 없음"으로 화면에 반영합니다.
+        removeButton.addEventListener('click', () => {
+          productElement.removeAttribute('data-stock')
+          productElement.querySelector('.stock').textContent = '없음'
+        })
+
+        const paragraphs = document.querySelectorAll('.life-tips p')
+        console.log(paragraphs)
+        console.log(paragraphs.length)
+
+        // for(paragraph of paragraphs) {
+        //   paragraph.classList.add('active')
+        // }
+        // for (const paragraph of paragraphs) {
+        //   paragraph.classList.add('color--primary')
+        // }
+
+        paragraphs.forEach((paragraph) => {
+          paragraph.classList.add('color-primary')
+        })
+
+        const paragraphArray = Array.from(paragraphs)
+        console.log(paragraphArray)
+})
+
+;(() => {
+  function round(numberValue) {
+          return Math.round(numberValue)
+        }
+
+        const box = document.querySelector('.box')
+        const measureButton = document.getElementById('measureBtn')
+
+        const boxRect = box.getBoundingClientRect()
+        console.log(boxRect)
+        console.log(boxRect.top)
+        console.log(boxRect.left)
+
+        measureButton.addEventListener('click', () => {
+        const boxRect = box.getBoundingClientRect()
+        console.log(boxRect)
+        console.log(round(boxRect.top))
+        console.log(boxRect.width)
+        console.log(boxRect.height)
+        })
+})
+
